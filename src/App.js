@@ -8,9 +8,9 @@ export default function App() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <input placeholder="Nick" name="nick" ref={register} />
-      <input placeholder="Correo electrónico" name="email" ref={register} />
-      <input placeholder="Contraseña" name="password" ref={register} />
+      <input placeholder="Nick" name="nick" ref={register ({ required: true})} />
+      <input placeholder="Correo electrónico" name="email" ref={register ({ required: true})} />
+      <input placeholder="Contraseña" name="password" ref={register ({ required: true})} />
       <input type="submit" />
     </form>
   );
